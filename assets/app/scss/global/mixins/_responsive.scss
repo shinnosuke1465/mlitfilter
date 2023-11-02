@@ -1,0 +1,44 @@
+@use "../variables/_fonts.scss" as font;
+@use "./media_query" as *;
+
+@mixin font-size($sp,$pc){
+  font-size: $sp;
+  @include lg{
+  font-size: $pc;
+  }
+}
+
+@mixin mt($sp,$pc){
+  margin-top: $sp;
+  @include lg{
+  margin-top: $pc;
+  }
+}
+
+@mixin pt($sp,$pc){
+  padding-top: $sp;
+  @include lg{
+  padding-top: $pc;
+  }
+}
+
+@mixin pb($sp,$pc){
+  padding-bottom: $sp;
+  @include lg{
+  padding-bottom: $pc;
+  }
+}
+
+@mixin pl($sp,$pc){
+  padding-left: $sp;
+  @include lg{
+  padding-left: $pc;
+  }
+}
+
+@mixin gap($sp,$pc){
+  gap: $sp;
+  @include lg{
+  gap: $pc;
+  }
+}

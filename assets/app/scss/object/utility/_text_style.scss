@@ -1,0 +1,40 @@
+@use "../../global/variables" as *;
+@use "../../global/functions" as *;
+@use "../../global/mixins/media_query" as *;
+
+// ----------------------------------------
+// 装飾クラス
+// ----------------------------------------
+.text {
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--small {
+    font-size: 80%;
+  }
+
+  &--large {
+    font-size: 120%;
+  }
+
+  &--bold {
+    font-weight: $font-bold;
+  }
+}
+
+@mixin  u-title-h1 {
+    @apply font-klee text-40px tracking-[.30em] leading-1.2 text-white
+}
+
+@mixin u-title-h2 {
+    @apply font-klee text-2xl font-bold tracking-wide leading-2.5 text-mainGreen;
+  }

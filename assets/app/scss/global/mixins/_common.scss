@@ -1,0 +1,23 @@
+@use "../variables/_fonts.scss" as font;
+@use "../variables/" as *;
+@use "./media_query" as *;
+@use "../functions/" as *;
+@use "../mixins/responsive" as *;
+
+
+//ページタイトル
+@mixin page_title{
+  @include font-size(size(40),size(48));
+  text-align: center;
+  color: $text-black;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-weight: 500;
+  font-family: $hind;
+}
+
+//各ページ上下余白
+@mixin page_padding{
+  @include pt(size(67),size(140));
+  @include pb(size(80),size(160));
+}
