@@ -1,0 +1,10 @@
+@use "../../global/variables" as *;
+@use "../../global/mixins/" as *;
+@use "../../global/functions/" as *;
+@use "../../object/utility/text_style" as *;
+@use "../../object/utility/contents_style" as *;
+
+.pg-ndex-world{
+  @include u-base-contents-padding;
+  @include u-1000px-contents-width;
+}
