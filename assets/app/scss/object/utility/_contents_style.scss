@@ -1,0 +1,11 @@
+@use "../../global/variables" as *;
+@use "../../global/mixins/media_query" as *;
+
+// コンテンツ幅
+@mixin u-base-contents-padding {
+  @apply px-[7.2%] lg:px-0;
+}
+
+@mixin u-1000px-contents-width {
+  @apply max-w-[1000px] mx-auto w-full;
+}

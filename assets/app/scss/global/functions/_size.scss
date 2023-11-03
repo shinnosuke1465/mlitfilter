@@ -1,0 +1,13 @@
+@use "sass:math";
+
+$baseSize: 16;
+$baseFontSize: 16;
+
+
+@function size($px) {
+    @return $px / $baseSize * 1rem;
+}
+
+@function text-size($px) {
+    @return $px / $baseFontSize * 1rem;
+}

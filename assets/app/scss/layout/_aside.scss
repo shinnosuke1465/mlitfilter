@@ -1,0 +1,14 @@
+@use "../global/variables" as *;
+@use "../global/mixins/" as *;
+@use "../global/functions/" as *;
+@use "../object/utility/text_style" as *;
+@use "../object/utility/contents_style" as *;
+
+.l-aside{
+  @apply hidden fixed top-0 bg-white left-0 min-h-screen z-[9000] flex-col items-center lg:flex;
+  width: size(360);
+
+  &__icon{
+    @apply py-10 bg-mainGreen w-full text-center;
+  }
+}

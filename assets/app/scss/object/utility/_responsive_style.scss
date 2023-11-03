@@ -1,0 +1,31 @@
+/*
+ * レスポンシブの表示非表示制御
+ */
+@use '../../global/mixins/media_query' as *;
+
+// 〜smサイズ(640px)のみ表示
+.sp-style {
+  display: block;
+
+  @include sm() {
+    display: none;
+  }
+}
+
+// mdサイズ(768px)以上で表示
+.md-style {
+  display: none;
+
+  @include md() {
+    display: block;
+  }
+}
+
+// lgサイズ(1024px)以上で表示
+.lg-style {
+  display: none;
+
+  @include lg() {
+    display: block;
+  }
+}
