@@ -4,11 +4,50 @@
 @use "../object/utility/text_style" as *;
 @use "../object/utility/contents_style" as *;
 
-.l-aside{
+.l-aside {
   @apply hidden fixed top-0 bg-white left-0 min-h-screen z-[9000] flex-col items-center lg:flex;
-  width: size(360);
+  width: 18.75%;
 
-  &__icon{
-    @apply py-10 bg-mainGreen w-full text-center;
+  &__icon {
+    @apply py-[12%] bg-mainGreen w-full text-center;
+    svg{
+      @apply w-[76%] h-fit;
+    }
   }
+  &__lists{
+    @apply w-full;
+  }
+}
+
+.l-aside-lists-list {
+
+  &__title {
+    @apply bg-black px-[13.5%];
+    @include u-en-title-md;
+
+    padding-top: size(17);
+    padding-bottom: size(14);
+  }
+
+  &__items{
+    @apply flex flex-col gap-5 px-[13.5%];
+
+    padding-top: size(20);
+    padding-bottom: size(30);
+  }
+
+  &__item{
+    &:nth-child(4) {
+        padding-top: size(10);
+    }
+  }
+
+  &__sub-title{
+    @include u-en-title-sm;
+  }
+
+  &__link{
+    @apply font-noto text-black text-18px;
+  }
+
 }

@@ -38,3 +38,10 @@
 @mixin u-title-h2 {
     @apply font-klee text-2xl font-bold tracking-wide leading-2.5 text-mainGreen;
   }
+
+@mixin u-en-title-md {
+  @apply font-mont text-20px font-bold tracking-wide leading-1.4 text-white;
+}
+@mixin u-en-title-sm {
+  @apply font-mont text-16px font-bold tracking-wide leading-1.4 text-mainGreen;
+}

@@ -1,0 +1,15 @@
+<div class="l-aside-lists-list">
+	<p class="l-aside-lists-list__title">{{title}}</p>
+	<ul class="l-aside-lists-list__items">
+		{% for list in lists %}
+			<li class="l-aside-lists-list__item">
+				{% if list.sub_title is defined %}
+					<p class="l-aside-lists-list__sub-title">{{ list.sub_title }}</p>
+				{% endif %}
+				{% if list.label is defined %}
+					<a href="#" class="l-aside-lists-list__link">{{ list.label }}</a>
+				{% endif %}
+			</li>
+		{% endfor %}
+	</ul>
+</div>

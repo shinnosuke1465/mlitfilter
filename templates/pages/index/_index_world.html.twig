@@ -1,6 +1,23 @@
-<div class="pg-index-world">
-{% include 'components/common/_section_title.html.twig' with {
+<section class="pg-index-world">
+  <div class="pg-index-world__inner">
+		<p class="pg-index-world__en">
+			MLITFILTE
+		</p>
+		{% include 'components/common/_section_title.html.twig' with {
     title: '世界が認めた高性能。',
     subtitle: '世界中で活躍する、最強車用エアコンフィルター。'
-} %}
-</div>
+    } %}
+		<div class="pg-index-world__btn-area">
+			{% include "components/common/_circle-arrow.html.twig" with {
+        text: "製品特徴",
+        link: "#",
+      }%}
+			{% include "components/common/_circle-arrow.html.twig" with {
+        text: "ラインアップ",
+        link: "#",
+      }%}
+
+		</div>
+	</div>
+  </div>
+</section>

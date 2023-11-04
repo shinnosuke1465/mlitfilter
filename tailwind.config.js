@@ -9,6 +9,7 @@ module.exports = {
     colors: {
       mainGreen: "#07913A",
       black:"#242424",
+      textBlack: "#707070",
       white: "#FFFFFF",
     },
     screens: {
@@ -24,7 +25,7 @@ module.exports = {
     letterSpacing: {
       normal: "0",
       tight: ".02em",
-      wide: ".04em",
+      wide: ".05em",
       wider: ".08em",
       widest: ".1em",
     },

@@ -1,15 +1,23 @@
 @use "../global/variables" as *;
 @use "../global/mixins/" as *;
+@use "../global/functions" as *;
 @use "../object/utility/text_style" as *;
 @use "../object/utility/contents_style" as *;
 
 .c-section-title {
-  /* スタイルをここに追加 */
+  @apply text-center;
+  &__main{
+    @apply font-noto font-bold leading-1.2;
+    font-size: size(64);
+  }
+
   &--white{
     @apply text-white;
   }
-}
 
-.c-section-title__sub {
-  /* スタイルをここに追加 */
+  &__sub{
+    @apply font-noto font-medium leading-1.4 mt-4;
+    font-size: size(24);
+    letter-spacing: 0.05rem;
+  }
 }
