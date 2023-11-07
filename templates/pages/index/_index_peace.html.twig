@@ -1,0 +1,35 @@
+<section class="pg-index-peace">
+	<div class="pg-index-peace__inner">
+		<div class="pg-index-peace__content">
+			{% include 'components/common/_section_title_small.html.twig' with {
+        title: '目指すは世界平和。',
+        subtitle: 'OUR MISSION',
+      } %}
+
+			<div class="pg-index-peace__text">
+				商品を選ぶのは貴方次第、きっと満足して頂ける。<br class="lg-style"/>
+				我々は、エアコンフィルター専業メーカーである。<br class="lg-style"/>
+				世界的に唯一と自負している。<br class="lg-style"/><br class="lg-style"/>
+				なぜ専業であるか、それを理解してほしい。<br class="lg-style"/>
+				フィルターが作れるからではない、<br class="lg-style"/>
+				売れるからでもない。<br class="lg-style"/><br class="lg-style"/>
+				幸せの空間づくり、皆の笑顔を見たいから、<br class="lg-style"/>
+				突き詰めれば世界平和を願う。<br class="lg-style"/>
+			</div>
+			<div class="pg-index-peace__btn-area">
+				{% include "components/common/_circle-arrow.html.twig" with {
+        text: "我々の強み",
+        link: "#",
+      }%}
+				{% include "components/common/_circle-arrow.html.twig" with {
+        text: "会社概要",
+        link: "#",
+      }%}
+
+			</div>
+		</div>
+		<div class="pg-index-peace__image">
+			<img src="{{ asset('build/images/world.png') }}" alt=""/>
+		</div>
+	</div>
+</section>

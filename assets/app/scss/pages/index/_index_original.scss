@@ -4,26 +4,30 @@
 @use "../../object/utility/text_style" as *;
 @use "../../object/utility/contents_style" as *;
 
-.pg-index-world{
+.pg-index-original{
   @apply flex justify-center text-white;
-  background-image: url('~/assets/images/world_bg.png');
+  background-image: url('~/assets/images/original_bg.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: size(50);
-  padding-bottom: size(330);
+  padding-bottom: size(74);
 
   &__inner{
-    @apply flex justify-center flex-col items-center gap-7;
     @include u-base-contents-padding;
     @include u-1000px-contents-width;
   }
 
-  &__btn-area{
-    @apply flex gap-12 text-white;
+  &__content{
+    @apply w-1/2 text-center flex flex-col gap-7;
   }
 
-  &__english{
-    @apply text-mainGreen text-32px font-mont font-semibold leading-6 tracking-wide;
+  &__text{
+    @apply font-noto text-20px tracking-wide font-medium leading-1.6;
   }
+
+  &__btn-area{
+    @apply mt-5;
+  }
+
 }

@@ -1,13 +1,17 @@
 @use "../global/variables" as *;
 @use "../global/mixins/" as *;
+@use "../global/functions" as *;
 @use "../object/utility/text_style" as *;
 @use "../object/utility/contents_style" as *;
 
 .c-section-title-small {
-  /* スタイルをここに追加 */
+  @apply text-center text-white;
 
-}
+  &__main{
+    @apply font-noto font-bold leading-1.2 text-40px;
+  }
 
-.c-section-title-small__sub {
-  /* スタイルをここに追加 */
+  &__sub{
+    @apply inline-block font-mont font-bold leading-1.4 mt-2 text-20px tracking-wide;
+  }
 }

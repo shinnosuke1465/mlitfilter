@@ -5,19 +5,16 @@
 @use "../object/utility/contents_style" as *;
 
 .c-section-title {
-  @apply text-center;
-  &__main{
-    @apply font-noto font-bold leading-1.2;
-    font-size: size(64);
-  }
+  @apply text-center text-white;
 
-  &--white{
-    @apply text-white;
+  &--black{
+    @apply text-black;
+  }
+  &__main{
+    @apply font-noto font-bold leading-1.2 text-64px;
   }
 
   &__sub{
-    @apply font-noto font-medium leading-1.4 mt-4;
-    font-size: size(24);
-    letter-spacing: 0.05rem;
+    @apply font-noto font-medium leading-1.4 mt-4 tracking-wide text-24px;
   }
 }

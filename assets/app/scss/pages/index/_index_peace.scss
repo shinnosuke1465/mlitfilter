@@ -1,0 +1,40 @@
+@use "../../global/variables" as *;
+@use "../../global/mixins/" as *;
+@use "../../global/functions/" as *;
+@use "../../object/utility/text_style" as *;
+@use "../../object/utility/contents_style" as *;
+
+.pg-index-peace {
+  @apply flex justify-center text-white;
+  background-image: url('~/assets/images/peace_bg.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: size(100);
+  padding-bottom: size(100);
+
+  &__inner {
+    @apply grid;
+    @include u-base-contents-padding;
+    @include u-1000px-contents-width;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__content {
+    @apply text-center flex flex-col gap-7;
+  }
+
+  &__text {
+    @apply font-noto text-20px tracking-wide font-medium leading-1.6;
+  }
+
+  &__btn-area {
+    @apply flex gap-12 justify-center mt-5;
+  }
+
+
+  &__image {
+    @apply grid max-w-[26.25rem] mx-auto;
+  }
+
+}

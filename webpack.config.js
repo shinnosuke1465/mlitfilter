@@ -45,10 +45,11 @@ Encore
     // enables hashed filenames (e.g. app.abc123.css)
     .enableVersioning(Encore.isProduction())
 
-    // configure Babel
-    // .configureBabel((config) => {
-    //     config.plugins.push('@babel/a-babel-plugin');
-    // })
+    .copyFiles({
+        from: "./assets/images",
+        to: !Encore.isProduction() ? "images/[path][name].[ext]" : 'images/[path][name].[hash:8].[ext]',
+        pattern: /\.(png|jpg|jpeg|svg)$/
+    })
 
     // enables and configure @babel/preset-env polyfills
     .configureBabelPresetEnv((config) => {
