@@ -1,0 +1,39 @@
+@use "../global/variables" as *;
+@use "../global/mixins/" as *;
+@use "../global/functions" as *;
+@use "../object/utility/text_style" as *;
+@use "../object/utility/contents_style" as *;
+
+.c-content-news-text{
+  border-top: 1px solid #DEDEDE;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  min-height: 135px;
+  padding: 0 20px;
+  position: relative;
+  gap: 20px;
+
+  &:last-child{
+    border-bottom: 1px solid #DEDEDE;
+  }
+
+  &::after{
+    background: url('~/assets/images/arrow.png') 0 no-repeat;
+    background-size: 12px auto;
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    width: 12px;
+  }
+
+  &__title{
+    @apply font-noto text-20px font-medium tracking-wide leading-1.6 text-black;
+  }
+
+  &__link{
+    @apply text-black;
+  }
+}

@@ -1,0 +1,21 @@
+@use "../global/variables" as *;
+@use "../global/mixins/" as *;
+@use "../global/functions" as *;
+@use "../object/utility/text_style" as *;
+@use "../object/utility/contents_style" as *;
+
+.c-content-news-text-information {
+  @apply flex gap-2 justify-start items-center;
+
+  &__date{
+    @apply font-mont font-bold tracking-wide leading-1.4 text-gray;
+  }
+
+  &__company{
+    @apply bg-gray rounded-3xl px-4;
+  }
+
+  &__tag{
+    @apply font-noto font-medium text-12px tracking-wide leading-2 text-white;
+  }
+}

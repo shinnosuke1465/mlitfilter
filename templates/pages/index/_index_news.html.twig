@@ -1,0 +1,19 @@
+<section class="pg-index-news">
+	<div class="pg-index-news__inner">
+		<ul class="pg-index-news__items">
+			{% for i in 0..2 %}
+				{% include "components/common/_news_text.html.twig"%}
+			{% endfor %}
+		</ul>
+		<div class="pg-index-news__btn-area">
+			{% include "components/common/_circle-arrow.html.twig" with {
+        text: "一覧を見る",
+        link: "#",
+        class: "c-btn-style--black",
+      }%}
+		</div>
+	</div>
+	<div class="pg-index-news__image">
+			<img src="{{ asset('build/images/news.png') }}" alt=""/>
+		</div>
+</section>

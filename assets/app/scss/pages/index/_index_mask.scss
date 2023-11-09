@@ -4,13 +4,13 @@
 @use "../../object/utility/text_style" as *;
 @use "../../object/utility/contents_style" as *;
 
-.pg-index-world{
+.pg-index-mask{
   @apply flex justify-center text-white;
-  background-image: url('~/assets/images/world_bg.png');
+  background-image: url('~/assets/images/mask_bg.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: size(50);
+  padding-top: size(60);
   padding-bottom: size(330);
 
   &__inner{
@@ -20,7 +20,7 @@
   }
 
   &__btn-area{
-    @apply flex gap-12 text-white;
+    @apply flex gap-12 ;
   }
 
   &__english{

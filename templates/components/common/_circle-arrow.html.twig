@@ -1,4 +1,4 @@
-<a type="{{ link }}" class="c-btn-style">{{ text }}
+<a type="{{ link }}" class="c-btn-style {% if class is defined and class %}{{ class }}{% endif %}">{{ text }}
 	<span class="c-btn-style__circle-arrow">
 		{% include 'components/svg/_circle.html.twig' %}
 		{% include 'components/svg/_arrow.html.twig' %}
