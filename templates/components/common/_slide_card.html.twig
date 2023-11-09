@@ -1,0 +1,14 @@
+<a href="{{ link }}" class="c-news-slide-card">
+	<div class="c-news-slide-card__image">
+		<img src="{{ asset(image_path) }}" alt=""/>
+	</div>
+	<div class="c-news-slide-card__information">
+		{% include "components/common/_information.html.twig" with {
+					date: date,
+					tag: tag,
+					}%}
+	</div>
+	<p class="c-news-slide-card__title">
+	{{ title }}
+	</p>
+</a>

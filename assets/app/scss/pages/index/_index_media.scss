@@ -1,0 +1,37 @@
+@use "../../global/variables" as *;
+@use "../../global/mixins/" as *;
+@use "../../global/functions/" as *;
+@use "../../object/utility/text_style" as *;
+@use "../../object/utility/contents_style" as *;
+
+.pg-index-media{
+  @apply px-[6.4%];
+  padding-top: size(60);
+  padding-bottom: size(100);
+
+  &__title{
+    @apply text-mainGreen inline-block font-mont font-bold leading-1.4 mt-2 text-20px tracking-wide;
+  }
+
+  &__btn-area{
+    @apply mt-12;
+  }
+
+}
+
+.pg-index-media-slide{
+  @apply overflow-y-hidden flex gap-10;
+
+  /* スクロールバーの非表示 */
+  &::-webkit-scrollbar {
+    width: 0.5em;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+}

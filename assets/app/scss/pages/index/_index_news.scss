@@ -1,0 +1,29 @@
+@use "../../global/variables" as *;
+@use "../../global/mixins/" as *;
+@use "../../global/functions/" as *;
+@use "../../object/utility/text_style" as *;
+@use "../../object/utility/contents_style" as *;
+
+.pg-index-news{
+  @apply flex justify-center relative;
+  padding:size(100) 0;
+
+  &__inner{
+    @include u-base-contents-padding;
+    @include u-1000px-contents-width;
+  }
+
+  &__text{
+    @apply font-noto text-20px tracking-wide font-medium leading-1.6;
+  }
+
+  &__btn-area{
+    @apply flex justify-end mt-12;
+  }
+
+  &__image{
+    @apply absolute top-12 left-[-3%] w-[16.41%] -z-10 max-w-[16rem];
+  }
+
+}
+

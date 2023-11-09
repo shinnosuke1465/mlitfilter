@@ -11,6 +11,7 @@ module.exports = {
       black:"#242424",
       textBlack: "#707070",
       white: "#FFFFFF",
+      gray: "#A9A9A9",
     },
     screens: {
       xxs: "414px",
@@ -32,6 +33,7 @@ module.exports = {
     extend: {
       fontSize: {
         "10px": "0.625rem",
+        "12px": "0.75rem",
         "16px": "1rem",
         "18px": "1.125rem",
         "20px": "1.25rem",
@@ -57,6 +59,7 @@ module.exports = {
         2: "2",
         2.3: "2.3",
         2.5: "2.5",
+        3: "3",
       },
     },
   },
