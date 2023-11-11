@@ -12,6 +12,8 @@ module.exports = {
       textBlack: "#707070",
       white: "#FFFFFF",
       gray: "#A9A9A9",
+      grayBg: "#616161",
+      footerBg: "#303030",
     },
     screens: {
       xxs: "414px",
@@ -20,7 +22,7 @@ module.exports = {
       md: "768px",
       lg: "1024px",
       xl: "1280px",
-      xxl: "1536px",
+      xxl: "1772px",
       max: "1920px",
     },
     letterSpacing: {
@@ -34,6 +36,7 @@ module.exports = {
       fontSize: {
         "10px": "0.625rem",
         "12px": "0.75rem",
+        "14px": "0.875rem",
         "16px": "1rem",
         "18px": "1.125rem",
         "20px": "1.25rem",

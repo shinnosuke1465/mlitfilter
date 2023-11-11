@@ -1,0 +1,107 @@
+<div class="l-footer-sitemaps">
+	<div class="l-footer-sitemaps__link">
+		<ul class="l-footer-sitemaps__link-product">
+
+			<li class="c-list-link-title">
+				<a href="#" class="c-list-link-title__anchor">製品紹介</a>
+			</li>
+
+			<li class="l-footer-sitemaps__product-box">
+				<ul>
+					{% include "components/common/_footer-sitemaps-link.html.twig" with {
+              links: [
+                {
+                  href: '#',
+                  sub_title: "車用エアコンフィルター",
+                },
+                {
+                  href: '#',
+                  text: "製品特長",
+                },
+                {
+                  href: '#',
+                  text: "ラインアップ",
+                },
+              ]
+            }%}
+				</ul>
+			</li>
+
+			<li class="l-footer-sitemaps__product-mask">
+				<ul>
+					{% include "components/common/_footer-sitemaps-link.html.twig" with {
+              links: [
+                {
+                  href: '#',
+                  sub_title: "エムリットマスク",
+                },
+                {
+                  href: '#',
+                  text: "仕様・特長",
+                },
+                {
+                  href: '#',
+                  text: "オンラインショップ",
+                },
+                {
+                  href: '#',
+                  text: "オリジナルプリントマスク",
+                },
+              ]
+            }%}
+				</ul>
+			</li>
+		</ul>
+		<ul class="l-footer-sitemaps__link-our">
+
+			<li class="c-list-link-title">
+				<a href="#" class="c-list-link-title__anchor">我々について</a>
+			</li>
+
+			{% include "components/common/_footer-sitemaps-link.html.twig" with {
+              links: [
+                {
+                  href: '#',
+                  text: "我々の強み",
+                },
+                {
+                  href: '#',
+                  text: "会社概要",
+                },
+                {
+                  href: '#',
+                  text: "商標登録証",
+                },
+              ]
+            }%}
+		</ul>
+		<ul class="l-footer-sitemaps__link-news">
+
+			<li class="c-list-link-title">
+				<a href="#" class="c-list-link-title__anchor">お知らせ</a>
+			</li>
+
+			{% include "components/common/_footer-sitemaps-link.html.twig" with {
+              links: [
+                {
+                  href: '#',
+                  text: "最新情報",
+                },
+                {
+                  href: '#',
+                  text: "メディア紹介",
+                },
+                {
+                  href: '#',
+                  text: "採用情報",
+                },
+              ]
+            }%}
+		</ul>
+		<ul class="l-footer-sitemaps__link-contact">
+			<li class="c-list-link-title">
+				<a href="#" class="c-list-link-title__anchor c-list-link-title__anchor--white">お問い合わせ</a>
+			</li>
+		</ul>
+	</div>
+</div>

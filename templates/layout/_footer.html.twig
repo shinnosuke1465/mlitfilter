@@ -1,0 +1,56 @@
+<footer class="l-footer">
+
+	<div class="l-footer__button">
+		{% include 'components/common/_buttons_return.html.twig' %}
+	</div>
+
+	<div class="l-footer__icon-area">
+		{% set icons = [
+    {
+        image_path: 'build/images/minkara.png',
+        href: '#'
+    },
+    {
+        image_path: 'build/images/youtube.png',
+        href: '#'
+    },
+    {
+        image_path: 'build/images/line.png',
+        href: '#'
+    },
+		] %}
+		<ul class="l-footer__icons">
+			{% for icon in icons %}
+				<li class="l-footer__icon">
+					<a href="{{ icon.href }}" class="l-footer__link">
+						<img src="{{ asset(icon.image_path) }}" alt=""/>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+
+	<div class="l-footer__sitemaps">
+		{% include 'components/layouts/_footer_sitemaps.html.twig'%}
+	</div>
+
+	<div class="l-footer-cr">
+		<div class="l-footer-cr__inner">
+			<div class="l-footer-cr__info">
+				<p class="l-footer-cr__text">Copyrights 2022 MLIT INDUSTRIES inc. All Rights Reserved.</p>
+				<a class="l-footer-cr__link">プライバシーポリシー</a>
+			</div>
+			<div class="l-footer-cr__sns">
+				<a href="">
+					{% include 'components/svg/_facebook.html.twig' %}
+				</a>
+				<a href="">
+					{% include 'components/svg/_insta.html.twig' %}
+				</a>
+				<a href="">
+					{% include 'components/svg/_twitter.html.twig' %}
+				</a>
+			</div>
+		</div>
+	</div>
+</footer>

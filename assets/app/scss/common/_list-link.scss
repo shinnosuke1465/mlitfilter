@@ -1,0 +1,31 @@
+@use "../global/variables" as *;
+@use "../global/functions" as *;
+@use "../global/mixins/" as *;
+@use "../object/utility/text_style" as *;
+@use "../object/utility/contents_style" as *;
+
+.c-list-link {
+  &:not(:first-child){
+    margin-top: 20px;
+  }
+
+  &__sub-title {
+    @apply font-noto text-20px font-medium leading-1.6 text-grayBg tracking-wide;
+  }
+
+  &__anchor {
+    @apply font-noto text-18px font-medium leading-1.4 text-white;
+  }
+}
+
+.c-list-link-title {
+  @apply mb-8;
+
+  &__anchor {
+    @apply font-noto text-24px font-bold tracking-wide text-grayBg leading-1.4;
+
+    &--white{
+      @apply text-white;
+    }
+  }
+}
