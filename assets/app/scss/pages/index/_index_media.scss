@@ -5,12 +5,13 @@
 @use "../../object/utility/contents_style" as *;
 
 .pg-index-media{
-  @apply px-[6.4%];
   padding-top: size(60);
   padding-bottom: size(100);
+  max-width: 1460px;
+  margin: 0 auto;
 
   &__title{
-    @apply text-mainGreen inline-block font-mont font-bold leading-1.4 mt-2 text-20px tracking-wide;
+    @apply px-[6.4%] text-mainGreen inline-block font-mont font-bold leading-1.4 mt-2 text-20px tracking-wide;
   }
 
   &__btn-area{

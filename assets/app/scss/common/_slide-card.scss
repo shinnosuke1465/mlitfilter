@@ -7,6 +7,12 @@
 .c-news-slide-card{
   @apply flex gap-5 flex-col shrink-0 w-[19.37rem] mt-7;
 
+  &:first-child {
+    @include lg {
+      margin-left:6.4%;
+    }
+  }
+
   &__title{
     @apply font-noto text-20px font-medium tracking-wide leading-1.6 text-black;
     padding-right: size(75);
