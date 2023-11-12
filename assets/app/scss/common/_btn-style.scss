@@ -5,7 +5,7 @@
 @use "../object/utility/contents_style" as *;
 
 .c-btn-style {
-  @apply font-noto text-18px leading-snug text-white flex items-center justify-center;
+  @apply font-noto text-18px leading-snug text-white flex items-center justify-center relative flex-row-reverse;
 
   &--black{
     color: black;
@@ -13,7 +13,27 @@
       fill: black;
     }
   }
+
+  &__text{
+    @apply relative inline-block cursor-pointer;
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: white;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    &:hover::after {
+      opacity: 1;
+    }
+  }
   &__circle-arrow {
+    @apply cursor-pointer;
     fill: white;
     width: 30px;
     height: 30px;
@@ -21,11 +41,19 @@
     position: relative;
     margin-left: 10px;
 
+    &:hover + .c-btn-style__text::after {
+      opacity: 1;
+    }
+
 
     svg:nth-of-type(2) {
       position: absolute;
       top: 10px;
       left: 12px;
     }
+  }
+
+  &--black .c-btn-style__text::after {
+    background: black;
   }
 }

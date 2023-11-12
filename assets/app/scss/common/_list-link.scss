@@ -5,7 +5,7 @@
 @use "../object/utility/contents_style" as *;
 
 .c-list-link {
-  &:not(:first-child){
+  &:not(:first-child) {
     margin-top: 20px;
   }
 
@@ -14,8 +14,20 @@
   }
 
   &__anchor {
-    @apply font-noto text-18px font-medium leading-1.4 text-white;
+    @apply font-noto text-18px font-medium leading-1.4 text-white relative pl-5;
+
+    &::after {
+      background: url('~/assets/images/border.png') 0 no-repeat;
+      background-size: 12px auto;
+      content: "";
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 10px;
+    }
   }
+
 }
 
 .c-list-link-title {
@@ -24,7 +36,7 @@
   &__anchor {
     @apply font-noto text-24px font-bold tracking-wide text-grayBg leading-1.4;
 
-    &--white{
+    &--white {
       @apply text-white;
     }
   }
