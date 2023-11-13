@@ -7,7 +7,7 @@
 					<p class="l-aside-lists-list__sub-title">{{ list.sub_title }}</p>
 				{% endif %}
 				{% if list.label is defined %}
-					<a href="#" class="l-aside-lists-list__link">{{ list.label }}</a>
+					<a href="#" class="l-aside-lists-list__link"><span class="l-aside-lists-list__link-text">{{ list.label }}</span></a>
 				{% endif %}
 			</li>
 		{% endfor %}

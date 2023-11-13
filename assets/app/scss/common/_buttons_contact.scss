@@ -1,0 +1,19 @@
+@use "../global/variables" as *;
+@use "../global/functions" as *;
+@use "../global/mixins/" as *;
+@use "../object/utility/text_style" as *;
+@use "../object/utility/contents_style" as *;
+
+.c-buttons-contact {
+    @apply py-6 bg-pink w-full text-white text-center cursor-pointer;
+
+    &:hover {
+        background-color: #B70B67;
+    }
+    &__title {
+        @apply font-mont text-24px font-bold leading-1.4 tracking-wide;
+    }
+    &__text {
+        @apply font-noto text-14px font-medium leading-1.4 tracking-widest;
+    }
+}

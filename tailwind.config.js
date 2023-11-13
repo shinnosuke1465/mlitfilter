@@ -14,6 +14,7 @@ module.exports = {
       gray: "#A9A9A9",
       grayBg: "#616161",
       footerBg: "#303030",
+      pink: "#91075E",
     },
     screens: {
       xxs: "414px",

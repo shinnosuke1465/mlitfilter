@@ -5,16 +5,32 @@
 @use "../object/utility/contents_style" as *;
 
 .l-aside {
-  @apply hidden fixed top-0 bg-white left-0 min-h-screen z-[9000] flex-col items-center lg:flex;
+  @apply hidden fixed top-0 bg-white left-0 h-full z-[9000] flex-col items-center lg:flex;
   width: 18.75%;
 
   &__icon {
-    @apply py-[12%] bg-mainGreen w-full text-center;
-    svg{
+    @apply py-10 bg-mainGreen w-full text-center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    svg {
       @apply w-[76%] h-fit;
     }
   }
-  &__lists{
+
+  &__lists {
+    @apply w-full;
+    overflow: scroll;
+    overscroll-behavior-y: contain;
+
+    /* スクロールバーの非表示 */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__button {
     @apply w-full;
   }
 }
@@ -29,25 +45,44 @@
     padding-bottom: size(14);
   }
 
-  &__items{
-    @apply flex flex-col gap-5 px-[13.5%];
+  &__items {
+    @apply flex flex-col gap-5 pl-[13.5%];
 
     padding-top: size(20);
     padding-bottom: size(30);
   }
 
-  &__item{
+  &__item {
     &:nth-child(4) {
-        padding-top: size(10);
+      padding-top: size(10);
     }
   }
 
-  &__sub-title{
+  &__sub-title {
     @include u-en-title-sm;
   }
 
-  &__link{
-    @apply font-noto text-black text-18px;
+  &__link {
+    @apply font-noto text-black text-18px relative pl-3 inline-block;
+
+    &:hover .l-aside-lists-list__link-text {
+      transform: translateX(7px);
+    }
+
+    &::after {
+      background: url('~/assets/images/arrow_aside.png') 0 no-repeat;
+      background-size: size(6) auto;
+      content: "";
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 12px;
+    }
+  }
+  &__link-text {
+    display: inline-block; // テキストをインラインブロック要素にする
+    transition: transform 0.3s ease; // スムーズな移動のためのトランジション
   }
 
 }
