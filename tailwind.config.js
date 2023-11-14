@@ -11,10 +11,12 @@ module.exports = {
       black:"#242424",
       textBlack: "#707070",
       white: "#FFFFFF",
+      bgWhite: "#F7F7F7",
       gray: "#A9A9A9",
       grayBg: "#616161",
       footerBg: "#303030",
       pink: "#91075E",
+      hoverPink:"#B70B67",
     },
     screens: {
       xxs: "414px",

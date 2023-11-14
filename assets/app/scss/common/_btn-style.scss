@@ -8,52 +8,43 @@
   @apply font-noto text-18px leading-snug text-white flex items-center justify-center relative flex-row-reverse;
 
   &--black{
-    color: black;
+    @apply text-black;
     & , *{
-      fill: black;
+      @apply fill-black;
     }
   }
 
   &__text{
     @apply relative inline-block cursor-pointer;
     &::after {
+      @apply w-full absolute -bottom-1 left-0 bg-white opacity-0 block;
       content: '';
-      display: block;
-      width: 100%;
-      height: 1px;
-      background: white;
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      opacity: 0;
+      height: size(1);
       transition: opacity 0.3s;
     }
     &:hover::after {
-      opacity: 1;
+      @apply opacity-100;
     }
   }
   &__circle-arrow {
-    @apply cursor-pointer;
-    fill: white;
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    position: relative;
-    margin-left: 10px;
+    @apply cursor-pointer relative inline-block fill-white;
+    width: size(30);
+    height: size(30);
+    margin-left: size(10);
 
     &:hover + .c-btn-style__text::after {
-      opacity: 1;
+      @apply opacity-100;
     }
 
 
     svg:nth-of-type(2) {
+      @apply absolute left-3;
       position: absolute;
-      top: 10px;
-      left: 12px;
+      top: size(10);
     }
   }
 
-  &--black .c-btn-style__text::after {
-    background: black;
+   &--black .c-btn-style__text::after {
+    @apply bg-black;
   }
 }

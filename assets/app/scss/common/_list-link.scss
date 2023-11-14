@@ -6,7 +6,7 @@
 
 .c-list-link {
   &:not(:first-child) {
-    margin-top: 20px;
+    margin-top: size(20);
   }
 
   &__sub-title {
@@ -17,14 +17,11 @@
     @apply font-noto text-18px font-medium leading-1.4 text-white relative pl-5;
 
     &::after {
+      @apply h-full absolute left-0 top-0;
+      content: "";
       background: url('~/assets/images/border.png') 0 no-repeat;
       background-size: 12px auto;
-      content: "";
-      height: 100%;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 10px;
+      width: size(10);
     }
   }
 

@@ -8,14 +8,14 @@
   @apply flex gap-2 justify-start items-center;
 
   &__date{
-    @apply font-mont font-bold tracking-wide leading-1.4 text-gray;
+    @apply text-12px xxl:text-16px font-mont font-bold tracking-wide leading-1.4 text-gray;
   }
 
   &__company{
-    @apply bg-gray rounded-3xl px-4;
+    @apply flex items-center bg-gray rounded-3xl px-2 xxl:px-4;
   }
 
   &__tag{
-    @apply font-noto font-medium text-12px tracking-wide leading-2 text-white;
+    @apply font-noto font-medium text-10px xxl:text-12px tracking-wide leading-2 text-white;
   }
 }

@@ -7,3 +7,9 @@
 
 // any CSS you import will output into a single css file (app.css in this case)
 import './scss/app.scss';
+
+import { pagetop } from "./js/page_top";
+
+window.addEventListener("DOMContentLoaded", () => {
+  pagetop();
+});

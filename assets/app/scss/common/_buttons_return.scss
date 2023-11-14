@@ -5,5 +5,5 @@
 @use "../object/utility/contents_style" as *;
 
 .c-buttons-return{
-  @apply bg-grayBg text-white w-full h-[7.5rem] flex items-center justify-center flex-col gap-2;
+  @apply bg-grayBg text-white w-full h-[7.5rem] flex items-center justify-center flex-col gap-2 cursor-pointer;
 }
