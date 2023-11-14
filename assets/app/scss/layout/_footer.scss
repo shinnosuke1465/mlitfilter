@@ -34,37 +34,37 @@
   @apply mx-[6.4%];
 
   &__link{
-    padding-top: 50px;
-    padding-bottom: 100px;
-    // display: grid;
-    display: flex;
-    // grid-template-columns: 550fr 250fr 200fr 300fr;
-    max-width: 1460px;
+    padding-top: size(50);
+    padding-bottom: size(100);
+    display: grid;
+    grid-template-columns: 603fr 245fr 200fr 188fr;
+    max-width: size(1460);
     margin: 0 auto;
-  }
-  &__link-product{
-    @apply xxl:flex xxl:flex-wrap;
 
-    .c-list-link-title{
-      @apply xxl:basis-full;
+    @include xxl() {
+      grid-template-columns: 550fr 250fr 200fr 300fr;
     }
   }
-  // &__product-box{
-  //   @apply xxl:basis-1/2;
-  // }
+  &__link-product{
+    @apply flex flex-wrap;
+
+    .c-list-link-title{
+      @apply basis-full;
+    }
+  }
+  &__product-box{
+    @apply basis-1/2;
+  }
   &__product-mask{
-    // @apply mt-8 xxl:mt-0 xxl:basis-[48%] xxl:ml-[2%];
-    @apply mt-8 xxl:mt-0 xxl:ml-12;
+    @apply basis-[48%] ml-[2%];
+    // @apply mt-8 xxl:mt-0 xxl:ml-12;
   }
 
   &__link-our{
-    @apply ml-24 xxl:ml-10;
+    @apply ml-8 xxl:ml-10;
   }
   &__link-news{
-    @apply ml-24;
-  }
-  &__link-contact{
-    @apply ml-[4.5rem];
+    @apply ml-8;
   }
 }
 

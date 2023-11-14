@@ -5,13 +5,17 @@
 @use "../../object/utility/contents_style" as *;
 
 .pg-index-media{
-  padding-top: size(60);
-  padding-bottom: size(100);
-  max-width: 1460px;
-  margin: 0 auto;
+  @apply mx-[6.4%];
+
+  &__inner{
+    @apply mx-auto;
+    padding-top: size(60);
+    padding-bottom: size(100);
+    max-width: size(1460);
+  }
 
   &__title{
-    @apply px-[6.4%] text-mainGreen inline-block font-mont font-bold leading-1.4 mt-2 text-20px tracking-wide;
+    @apply text-mainGreen inline-block font-mont font-bold leading-1.4 mt-2 text-20px tracking-wide;
   }
 
   &__btn-area{
@@ -21,7 +25,7 @@
 }
 
 .pg-index-media-slide{
-  @apply overflow-y-hidden flex gap-10;
+  @apply flex gap-[4%] mt-7;
 
   /* スクロールバーの非表示 */
   &::-webkit-scrollbar {

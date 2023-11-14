@@ -40,3 +40,13 @@
     @content;
   }
 }
+
+/// min-width : 1772px のメディアクエリ
+/// MacBook 11 inch 等
+/// @content
+/// @group media-query
+@mixin xxl {
+  @media (min-width: $xxl) {
+    @content;
+  }
+}

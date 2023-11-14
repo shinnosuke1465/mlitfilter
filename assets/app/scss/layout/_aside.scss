@@ -5,14 +5,10 @@
 @use "../object/utility/contents_style" as *;
 
 .l-aside {
-  @apply hidden fixed top-0 bg-white left-0 h-full z-[9000] flex-col items-center lg:flex;
-  width: 18.75%;
+  @apply hidden fixed top-0 bg-white left-0 h-full z-[9000] flex-col items-center lg:flex w-[18.75%];
 
   &__icon {
-    @apply py-10 bg-mainGreen w-full text-center;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    @apply py-10 bg-mainGreen w-full text-center sticky top-0 z-10;
 
     svg {
       @apply w-[76%] h-fit;
@@ -20,13 +16,10 @@
   }
 
   &__lists {
-    @apply w-full;
-    overflow: scroll;
-    overscroll-behavior-y: contain;
+    @apply w-full overflow-scroll overscroll-y-contain;
 
-    /* スクロールバーの非表示 */
     &::-webkit-scrollbar {
-      display: none;
+      @apply hidden;
     }
   }
 
@@ -70,19 +63,15 @@
     }
 
     &::after {
+      @apply h-full absolute top-0 left-0 w-3;
+      content: "";
       background: url('~/assets/images/arrow_aside.png') 0 no-repeat;
       background-size: size(6) auto;
-      content: "";
-      height: 100%;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 12px;
     }
   }
   &__link-text {
-    display: inline-block; // テキストをインラインブロック要素にする
-    transition: transform 0.3s ease; // スムーズな移動のためのトランジション
+    @apply inline-block;
+    transition: transform 0.3s ease;
   }
 
 }
